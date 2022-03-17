@@ -134,14 +134,14 @@ def credential_Issuing(params, pub, ciphertext, issuer_params):
     # The ciphertext of the encrypted attribute v
     a, b = ciphertext
 
-    # 1) Create a "u" as u = b*g 
-    # 2) Create a X1b as X1b == b * X1 == (b * x1) * h
-    #     and x1b = (b * x1) mod o 
+    # 1) Create a random point "u"; do this by sampling a random scalar "beta" and generating "u = beta * g "
+    # 2) Create a X1b as X1b == beta * X1 == (beta * x1) * h
+    #     and x1b = (beta * x1) mod o
     
     # TODO 1 & 2
 
     # 3) The encrypted MAC is u, and an encrypted u_prime defined as 
-    #    E( (b*x0) * g + (x1 * b * v) * g ) + E(0; r_prime)
+    #    E( (beta*x0) * g + (x1 * beta * v) * g ) + E(0; r_prime)
     
     # TODO 3
 
